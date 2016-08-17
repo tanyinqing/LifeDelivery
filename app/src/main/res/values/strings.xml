@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">邻优网配送</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="phone_title">请输入时间</string>
+    <string name="phone_msg">设置您的靓照</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="check_time">选择时间</string>
+    <string name="good_price">请输入要修改的价格</string>
+
+    <string name="is_positive">确定</string>
+    <string name="phone_number_ofzixun">tel://1513214</string>
+    <string name="title_activity_user_center_model">UserCenterModel</string>
+    <string name="title_activity_order_list">OrderListActivity</string>
+    <string name="title_activity_order_detail">OrderDetailActivity</string>
+    <string name="title_activity_tablet_menu">TAbletMenu</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
+    /**************************极光推送代码**************************/
+    <string name="hello">Hello World, JPush!</string>
+    <string name="tag_hint">Tag为大小写字母，数字，下划线,中文， 多个用以逗号分隔</string>
+    <string name="alias_hint">Alias为大小写字母，数字，下划线</string>
+    <string name="style_hint">style为数字</string>
+    <string name="error_style_empty">style不能为空</string>
+    <string name="error_alias_empty">alias不能为空</string>
+    <string name="error_tag_empty">tag不能为空</string>
+    <string name="error_tag_gs_empty">格式不对</string>
+    <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
+    <string name="logining">程序在后台执行, 请查看日志！</string>
+    <string name="setting_su">设置成功</string>
+    /***************************************************************/
+
+    <string name="alert_dialog_username">Name:</string>
+    <string name="alert_dialog_password">Password:</string>
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Cancel</string>
+    <string name="alert_dialog_text_entry">Text Entry dialog</string>
+    <string name="title_activity_district_select">DistrictSelectActivity</string>
+</resources>
