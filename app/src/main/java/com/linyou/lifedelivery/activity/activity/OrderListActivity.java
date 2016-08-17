@@ -109,7 +109,7 @@ public class OrderListActivity extends TitleBarActivity {
     };
 
     private void SaoMiao(){
-        // 扫码操作
+        // 扫码操作 扫描条形码
         Intent intent = new Intent(this, CaptureActivity.class);
         startActivityForResult(intent, 0);
         Log.d("测试", "randnumber");
