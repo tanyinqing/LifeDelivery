@@ -84,7 +84,7 @@ public class OrderGoodsAapater extends AdapterBase<OrderMapGoods>{
             textPrice.setText("￥"+ PublicUtil.priceFormat(mOrderMapGoods.getPrice()));
             //List<GoodsImage> pics = mGoods.getPicList();
             //String imageUrl = "";
-            String imageUrl = mGoods.getPic();
+            String imageUrl = mGoods.getPic().trim();
             imageOrderGoods.setImageResource(R.drawable.default_goods);
             //if(null != pics && pics.size() > 0)
             if(null != imageUrl && !imageUrl.equals(""))

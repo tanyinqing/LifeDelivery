@@ -276,4 +276,6 @@ public class OrderListModel extends BaseModel {
         i.setClass(mContext, OrderDetailActivity.class);
         mContext.startActivity(i);
     }
+
+
 }

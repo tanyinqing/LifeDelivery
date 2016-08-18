@@ -5,6 +5,7 @@ public class Constant {
 	/**************************关键核心代码**************************/
 	public static final String PagerNumber = "PagerNumber";  //这个参数
 	public static final String OrderNumber = "OrderNumber";  //这个参数决定订单的数量
+	public static final String OrderId = "OrderId";  //这个参数是扫描小票后保存订单id
 	/***************************************************************/
 
 	//public static final String URLBASE = "http://210.56.209.74:9080/";  //下载图片是用到的网址

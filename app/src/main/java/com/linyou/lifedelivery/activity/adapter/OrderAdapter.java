@@ -113,6 +113,8 @@ public class OrderAdapter extends AdapterBase<Order> {
         Button buttonGrab;
         @ViewInject(R.id.buttonCom)
         Button buttonCom;
+        @ViewInject(R.id.storeName)
+        TextView storeName;
         Order mOrder;
 
         void update(Order mOrder) {
@@ -152,7 +154,7 @@ public class OrderAdapter extends AdapterBase<Order> {
                 for (int i = 0; i < size; i++) {
                     imageView = (ImageView) linearImages.getChildAt(i);
                     //List<GoodsImage> pics = list.get(i).getGoods().getPicList();
-                    String pic=list.get(i).getGoods().getPic();
+                    String pic=list.get(i).getGoods().getPic().trim();
                     //if(null != pics && pics.size() > 0)
                     if(null != pic && !pic.equals(""))
                     {
@@ -187,6 +189,7 @@ public class OrderAdapter extends AdapterBase<Order> {
             }
 
             textTime.setText("" + mOrder.getCreateTime().replace("T", " "));
+            storeName.setText(mOrder.getGoodsUser());
 
 
         }
@@ -278,22 +281,20 @@ public class OrderAdapter extends AdapterBase<Order> {
                         @Override
                         public void onClick(View v) {
                            // money=mEditText.getText().toString();
-                            money=dialog.getCurrentEditText().getText().toString();
+                            money=dialog.getCurrentEditText().getText().toString().trim();
                             mOrderWeb.updateRobOrderPrice(mOrder.getId(), money, new DataListener<String>() {
 
                                 @Override
                                 public void onSuccess(String data) {
                                     PublicUtil.ShowToast(data);
-                                    //textMoney.setText(money);
+                                    textMoney.setText("￥" + PublicUtil.priceFormat(money));
                                     // mOrderAdapter.removeItem(mOrder);
                                     // mOrderAdapter.notifyDataSetChanged();
-                                    mHandler.sendEmptyMessage(1);
+                                   // mHandler.sendEmptyMessage(1);
                                 }
-
                             });
                     }
                     });
-
             dialog.create(null).show();
                         }
 
@@ -302,6 +303,8 @@ public class OrderAdapter extends AdapterBase<Order> {
         public void SaoMiao(View view)
         {
             mHandler.sendEmptyMessage(3);
+            mPrefUtil.putSetting(Constant.OrderId, mOrder.getId());
+            Log.d("这个参数是扫描小票后保存订单id",mOrder.getId());
 
         }
 
@@ -354,4 +357,5 @@ public class OrderAdapter extends AdapterBase<Order> {
                             PublicUtil.ShowToast("删除订单成功");
                         }
                     }
+
         }

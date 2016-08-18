@@ -125,7 +125,7 @@ public class OrderListActivity extends TitleBarActivity {
                     + "&username=" + username;*/
             //访问url
           // etUsername.setText(randnumber);
-            Log.d("测试", randnumber);
+            Log.d("测试", randnumber+"小票对应的订单号"+mPrefUtil.getStrSetting(Constant.OrderId));
             //HttpUtils.login("https://www.baidu.com/");
         }
     }

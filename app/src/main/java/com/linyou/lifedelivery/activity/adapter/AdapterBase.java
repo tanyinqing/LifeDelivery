@@ -25,7 +25,7 @@ public abstract class AdapterBase<T> extends BaseAdapter {
     public final List<T> mList = new ArrayList<T>();
     public Context context;
     public LayoutInflater mInflater;
-    public PreferenceUtil mPrefUtil;
+    public static PreferenceUtil mPrefUtil;
     protected static ServiceApplication serviceApplication;//全局 成员变量 成员方法
 
     public AdapterBase(Context baseContext)
